@@ -1,0 +1,44 @@
+/* pages/modifyMyCard/modifyMyCard.wxss */
+@import '/style/common.wxss';
+/*本页面css属性*/
+page {
+  background-color: #efefef;
+}
+/*关于人物头像的属性*/
+.face {
+  margin: 10px 0 0 0;
+}
+.face image {
+  width: 100px;
+  height: 100px;
+}
+.face-text {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.8rem;
+}
+/*关于修改个人信息的属性*/
+.infos {
+  background-color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+.info {
+  width: 100%;
+  justify-content: space-between;
+}
+.info__key {
+  font-size: 0.8rem;
+  color: black;
+}
+.info__value {
+  font-size: 1rem;
+}
+.info__textarea {
+  min-height: 100px;
+}
+/*关于保存按钮的属性*/
+.save-btn {
+  margin: 40px 0 200px 0;
+  width: 90%;
+}

@@ -1,0 +1,60 @@
+<!--pages/service/service.wxml-->
+<import src='/template/searchBar/searchBar.wxml' />
+<import src='/template/adBar/adBar.wxml' />
+
+<view class='container container--color-white'>
+  <view class='headWrapper' style='background-image: url({{bg1}}); background-size: cover;background-repeat: no-repeat; background-position: bottom'>
+    <!--搜索框-->
+    <template is='searchBar' data='{{placeholder: "搜索相关业务人员", searchCondition: searchCondition}}'></template>
+    <text class='search__keywords'>关键词：金融；AAABBB</text>
+
+    <!--广告位-->
+    <template class='ad' is='adBar' data='{{ad}}'></template>
+
+    <!--Banner-->
+    <view class='navBar'>
+      <view class='navBar__btn  {{currentKind=="capital"?"navBar__btn-state--chosen":""}}' bindtap='showCapitalClass'>
+        <image class='navBar__icon' src='img/capital.png'></image>
+      </view>
+      <view class='navBar__btn  {{currentKind=="stock"?"navBar__btn-state--chosen":""}}' bindtap='showStockClass'>
+        <image class='navBar__icon' src='img/stock.png'></image>
+      </view>
+      <view class='navBar__btn  {{currentKind=="merge"?"navBar__btn-state--chosen":""}}' bindtap='showMergeClass'>
+        <image class='navBar__icon' src='img/merge.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <!--业务人员列表-->
+  <view wx:if='{{searchCondition}}'>
+    <text class='jrq__words'>以下是“{{searchCondition}}”的搜索结果：</text>
+  </view>
+  <view class='content'>
+    <view wx:for='{{cards}}' wx:key='openid'>
+      <view class='cardWrapper jrq__block' bindtap='onClickThisCard' data-id='{{item.openid}}'>
+        <view class='card__decorator'>
+          <text class='card__kindName'>类别：{{currentKindName}}</text>
+        </view>
+        <view class='card__main'>
+          <image class='card__face' src='{{item.face}}'></image>
+          <view class='card__info'>
+            <view class='card__title'>
+              <text class='card__username'>{{item.username}}</text>
+              <text class='card__position'>{{item.position ? item.position : "未知职务"}}</text>
+            </view>
+            <view class='card__title' style='font-size: 0.5rem;'>
+              <text class='card__city'>{{item.city ? item.city : "未知城市"}}</text>
+              <text class='card__company'>{{item.company ? item.company : "未知公司"}}</text>
+            </view>
+            <view class='div-line'></view>
+            <text class='card__intro'>{{item.intro ? item.intro : "暂无简介"}}</text>
+          </view>
+        </view>
+        <view class='card__category' style='background-color:{{item.bgColor}}'>
+          <text>{{item.label}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>

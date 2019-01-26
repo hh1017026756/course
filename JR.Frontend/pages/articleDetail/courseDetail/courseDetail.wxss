@@ -1,0 +1,43 @@
+/* pages/articleDetail/articleDetail.wxss */
+@import '/style/common.wxss';
+page {
+  background: #efefef;
+}
+.head {
+  width: 100%;
+  max-height: 200px;
+}
+.head > image {
+  width: 100%;
+  max-height: 200px;
+}
+.course-head {
+  padding: 10px;
+  background-color: white;
+}
+.course-intro {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  background-color: white;
+}
+.updateButton {
+  display: inline;
+  margin: 0 10px;
+  padding: 3px;
+  font-size: 0.6rem;
+}
+.course-intro > .detail > text {
+  margin: 3px 0;
+}
+.course-video {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  background-color: white;
+}
+.course-video .content video {
+  width: 100%;
+}
+.course-buttons {
+  padding: 20px 10px 60px 10px;
+  width: 100%;
+}

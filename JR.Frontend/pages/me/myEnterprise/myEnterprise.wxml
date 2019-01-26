@@ -1,0 +1,38 @@
+<!--pages/me/myEnterprise.wxml-->
+<view class='container container--color-gray'>
+<view class='wrapper'>
+    <text class='wrapper__key'>认证状态：</text>
+    <text class='wrapper__value'>{{admin.status}}</text>
+  </view>
+  <view class='wrapper'>
+    <text class='wrapper__key'>用户名：</text>
+    <text class='wrapper__value'>{{admin.adminUsername}}</text>
+  </view>
+  <view class='wrapper'>
+    <text class='wrapper__key'>密码：</text>
+    <text class='wrapper__value'>{{admin.adminPassword}}</text>
+  </view>
+  <view class='wrapper'>
+    <text class='wrapper__key'>企业名称：</text>
+    <text class='wrapper__value'>{{admin.name}}</text>
+  </view>
+  <view class='wrapper'>
+    <text class='wrapper__key'>企业描述：</text>
+    <text class='wrapper__value'>{{admin.description}}</text>
+  </view>
+  <view class='wrapper'>
+    <text class='wrapper__key'>企业许可证：</text>
+    <image class='wrapper__license' mode='widthFix' src='{{admin.licenseUrl}}'></image>
+  </view>
+  <view class='wrapper'>
+    <text class='wrapper__key'>提交时间：</text>
+    <text class='wrapper__value'>{{admin.submitTime}}</text>
+  </view>
+  <view class='wrapper'>
+    <text class='wrapper__key'>认证时间：</text>
+    <text class='wrapper__value'>{{admin.verifyTime}}</text>
+  </view>
+  <navigator class='button' open-type='navigateBack'>
+    <button class='jrq__button'>返回</button>
+  </navigator>
+</view>

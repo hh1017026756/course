@@ -1,0 +1,5 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <text class='info'>由于您是第一次登陆本小程序,请点击授权后登陆</text>
+  <button class='jrq__button login-btn' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>

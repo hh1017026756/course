@@ -1,0 +1,14 @@
+/* template/likeIcon/likeIcon.wxss */
+.likeClick {
+  display: flex;
+  align-items: center;
+  width: 50px;
+}
+.likeNum {
+  font-size: 0.7rem;
+}
+.likeImage {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}

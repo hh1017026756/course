@@ -1,0 +1,2 @@
+<!--pages/index/ad/ad.wxml-->
+<web-view src='{{url}}'></web-view>

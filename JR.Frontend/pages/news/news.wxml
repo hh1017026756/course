@@ -1,0 +1,22 @@
+<!--pages/news/news.wxml-->
+<view class='newsItemListWrapper'>
+  <view wx:for='{{newsItemList}}' wx:for-item="newsItem">
+    <view class='newsWrapper jrq__block'>
+      <view class='newsItem__decorator'>
+        <text class='newsItem__name'>简短资讯</text>
+      </view>
+      <view class='newsItem'>
+        <text class='newsItem__title'>{{newsItem.title}}</text>
+        <text class='newsItem__content'>{{newsItem.content}}</text>
+        <view class='newsItem__info'>
+          <!--
+        <image class='newsItem__infoImage' src='{{newsItem.writerFace}}'></image>
+        -->
+          <text class='newsItem__infoText'>来源:{{newsItem.writerName}}</text>
+          <text class='newsItem__infoText'>类型:{{newsItem.type}}</text>
+          <text class='newsItem__infoText'>{{newsItem.timeStamp}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/me/createPost/createPost.wxss */
+@import '/style/common.wxss';
+
+page {
+  background-color: #efefef;
+}
+
+.post__hide {
+  height: 0;
+  overflow: hidden;
+}
+
+.post__canvas {
+  width: 600px;
+  height: 900px;
+  left: -600px;
+}
+
+.post__image {
+  box-shadow: 0 0 10px #000;
+  width: 90%;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.post__button {
+  margin: 20px auto 0;
+  width: 200px;
+}

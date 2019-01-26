@@ -1,0 +1,43 @@
+<!--pages/articleDetail/articleDetail.wxml-->
+<!--课程类展示-->
+<view style='width:100%;'>
+  <view class='head'>
+    <image mode='widthFix' src='{{course.image}}'></image>
+  </view>
+  <view class='course-head row'>
+    <view class='coursePrice column' style='width:100%'>
+      <text style='color:black; font-size:1rem; font-weight:bold;'>{{course.title}}</text>
+      <view>
+        <text style='color:orange; font-size:0.8rem'>¥{{course.price}}</text>
+        <text style='margin: 0 10px; font-size:0.7rem'>银牌会员*{{discount298}}，金牌会员*{{discount998}}</text>
+        <navigator class='jrq__button jrq__button--color-red updateButton' url='/pages/me/updateMe/updateMe'>身份升级</navigator>
+      </view>
+    </view>
+    <view class='v-center h-center' style='width:100px; border:1px solid black; margin:5px; border-radius:5px'>
+      <text style='color:black; font-size: 1rem; margin:3px'>课程</text>
+    </view>
+  </view>
+  <view class='course-intro column'>
+    <text style='color:black; font-size:1rem; font-weight:bold;'>课程介绍</text>
+    <view class='div-line'></view>
+    <view class='detail column' style='font-size:0.8rem;'>
+      <text>课程作者：{{course.writerName}}</text>
+      <text>课程发布日期：{{course.date}}</text>
+      <text>课程点赞数：{{course.likeNum}}</text>
+    </view>
+  </view>
+  <view class='course-video'>
+    <text style='color:black; font-size:1rem; font-weight:bold;'>课程视频</text>
+    <view class='div-line'></view>
+    <view class='content'>
+      <text wx:if='{{!course.hasBought}}'>视频预览1分钟：请购买该课程后观看完整课程视频</text>
+      <video src='{{course.video}}'></video>
+    </view>
+  </view>
+  <view class='course-buttons row'>
+    <view class='purchase' style='width:100%'>
+      <button class='jrq__button' wx:if='{{!course.hasBought}}' bindtap='onPurchase'>立即购买</button>
+      <button class='jrq__button' wx:else disabled>已购买</button>
+    </view>
+  </view>
+</view>

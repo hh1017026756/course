@@ -1,0 +1,34 @@
+<template name="articleItem">
+  <!--一篇文章-->
+  <view class='article'>
+    <view class='article__decorator'>
+      <text class='article__kindName'>圈子文章</text>
+    </view>
+    <!--作者信息-->
+    <view class='writer' bindtap='onClickThisFace' data-id='{{item.writerOpenid}}'>
+      <image class='writer__face' src='{{item.writerFace}}'></image>
+      <text class='writer__name'>{{item.writerName}}</text>
+    </view>
+    <!--文章详情-->
+    <text class='article__content'>{{item.content ? item.content : item.title}}</text>
+    <!--文章图片-->
+    <view class='article__imageList'>
+      <image class='article__image' mode='aspectFill' bindtap='previewImg' data-list="{{item.images}}" data-src="{{image}}" wx:for='{{item.images}}' wx:for-item='image' src='{{image}}'></image>
+    </view>
+    <!--文章分享链接-->
+    <view class='article__bottom'>
+      <!--
+      <view class='v-center' bindtap='onShare'>  
+        <image src='img/share.png' style='width: 20px; height: 20px;'></image>
+        <text>分享到朋友圈</text>
+      </view>
+      -->
+      <text class='article__date'>圈子发布日期：{{item.date}}</text>
+      <view class='like v-center' catchtap='likePlus' data-id='{{item.id}}'>
+        <text class='like__num'>{{item.likeNum}}</text>
+        <image class='like__image' wx:if='{{item.hasLiked}}' src='img/like.png'></image>
+        <image class='like__image' wx:else src='img/unlike.png'></image>
+      </view>
+    </view>
+  </view>
+</template>

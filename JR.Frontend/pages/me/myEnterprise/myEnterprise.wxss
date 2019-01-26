@@ -1,0 +1,25 @@
+/* pages/me/myEnterprise.wxss */
+@import '/style/common.wxss';
+
+.wrapper {
+  width: 100%;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  background-color: #FFF;
+}
+
+.wrapper__key {
+  display: inline-block;
+  width: 120px;
+  color: #000;
+}
+
+.wrapper__license {
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+.button {
+  width: 90%;
+  margin: 20px 0;
+}

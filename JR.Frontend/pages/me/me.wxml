@@ -1,0 +1,82 @@
+<!--pages/me/me.wxml-->
+<import src='/template/publishBar/publishBar.wxml'></import>
+
+<view class='container container--color-white'>
+  <view class='header jrq__block'>
+    <template is='publishBar'></template>
+    <navigator class='card' url='myHistory/myHistory' hover-class="none" open-type='navigate'>
+      <view class='card__main'>
+        <image class='card__left' src='{{myInfo.face}}'></image>
+        <view class='card__right'>
+          <view class='card__detail card__detail--wrapper'>
+            <text class='card__name'>{{myInfo.username}}</text>
+            <view class='card__medal' wx:for='{{myInfo.medals}}' wx:key='*this'>
+              <image class='card__medal' src='{{item}}'></image>
+            </view>
+          </view>
+          <text class='card__text'>手机号: {{myInfo.phone ? myInfo.phone : "未设置"}}</text>
+          <text class='card__text'>Email: {{myInfo.email ? myInfo.email : "未设置"}}</text>
+          <text class='card__text'>任职公司: {{myInfo.company ? myInfo.company : "未设置"}}</text>
+          <text class='card__text'>部门: {{myInfo.department ? myInfo.department : "未设置"}}</text>
+          <text class='card__text'>职位: {{myInfo.position ? myInfo.position : "未设置"}}</text>
+        </view>
+      </view>
+      <view class='div-line'></view>
+      <text class='card__intro'>个人简介：{{myInfo.intro ? myInfo.intro : "未设置"}}</text>
+    </navigator>
+    <button class='jrq__button card__sendButton' bindtap='showModal'>分享我的名片</button>
+  </view>
+
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box modal" wx:if="{{showModalStatus}}">
+    <button class='modal__button modal__left' open-type='share'>
+      <image class='modal__image' src='img/wechat.png'></image>
+      <text class='modal__text'>分享给好友</text>
+    </button>
+    <button class='modal__button modal__right' bindtap='drawPost'>
+      <image class='modal__image' src='img/post.png'></image>
+      <text class='modal__text'>生成海报</text>
+    </button>
+  </view>
+
+  <!--选项面板-->
+  <view class='panel'>
+    <view class='panel__decorator'>
+      <text class='panel__name'>更多选项</text>
+    </view>
+
+    <view class='panel__setting jrq__block'>
+      <navigator class='navigator' url='modifyMyCard/modifyMyCard' hover-class="none" open-type='navigate'>
+        <text class='navigator__text'>我的基本信息</text>
+        <image class='navigator__arrow' src='img/arrow.png'></image>
+      </navigator>
+      <view class='div-line'></view>
+      <navigator class='navigator' url='myCardHolder/myCardHolder' hover-class="none" open-type='navigate'>
+        <text class='navigator__text'>我的名片夹</text>
+        <image class='navigator__arrow' src='img/arrow.png'></image>
+      </navigator>
+      <view class='div-line'></view>
+      <navigator class='navigator' url='myHistory/myHistory' hover-class="none" open-type='navigate'>
+        <text class='navigator__text'>我的发布</text>
+        <image class='navigator__arrow' src='img/arrow.png'></image>
+      </navigator>
+      <view class='div-line'></view>
+      <navigator class='navigator' url='updateMe/updateMe' hover-class="none" open-type='navigate'>
+        <text class='navigator__text'>身份升级</text>
+        <image class='navigator__arrow' src='img/arrow.png'></image>
+      </navigator>
+      <view class='div-line'></view>
+      <navigator class='navigator' url='pay/pay' hover-class="none" open-type='navigate'>
+        <text class='navigator__text'>金额充值</text>
+        <image class='navigator__arrow' src='img/arrow.png'></image>
+      </navigator>
+    </view>
+
+    <view class='panel__more jrq__block'>
+      <navigator class='navigator' url='myEnterprise/myEnterprise' hover-class="none" open-type='navigate'>
+        <text class='navigator__text'>我的企业账户</text>
+        <image class='navigator__arrow' src='img/arrow.png'></image>
+      </navigator>
+    </view>
+  </view>
+</view>

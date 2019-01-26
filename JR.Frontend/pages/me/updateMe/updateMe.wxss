@@ -1,0 +1,114 @@
+/* pages/me/updateMe/updateMe.wxss */
+@import '/style/common.wxss';
+big {
+  color: white;
+  font-size: 1rem;
+}
+.rowWrapper{
+    width: 720rpx;
+    line-height: 88rpx;
+    margin-left: 30rpx;
+    margin-bottom: 0;
+    display: flex;
+    font-size: 28rpx;
+    /*justify-content: space-between;*/
+}
+.pay__note {
+  font-size: 0.6rem;
+  height: 30px;
+  line-height: 30px;
+}
+.pay__button {
+  bottom: 0;
+  height: 30px;
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 30px;
+  background-color: #D62F36;
+  color: #FFF;
+}
+.updateWrapper {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #F0F0F0;
+  margin: 15px 0 0 0;
+  padding: 15px 0;
+}
+.updateWrapper__image {
+  margin: 0 auto;
+  height: 160px;
+  width: 350px;
+}
+.updateWrapper__capsule {
+  margin: 5px auto 0 auto;
+  height: 40px;
+  width: 350px;
+  overflow: auto;
+}
+.capsule__left {
+  display: inline-block;
+  width: 66%;
+  height: 100%;
+  vertical-align: top;
+  text-align: left;
+  line-height: 40px;
+  padding: 0 0 0 20px;
+  border-radius: 20px 0 0 20px;
+}
+.capsule__left--bg-red {
+  color: #FFF;
+  font-size: 0.8rem;
+  background-color: #D62F36;
+}
+.capsule__right {
+  display: inline-block;
+  height: 100%;
+  width: 33%;
+  margin: 0 0 0 1%;
+  vertical-align: top;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 0 20px 20px 0;
+}
+.capsule__right--bg-red {
+  color: #FFF;
+  font-size: 0.8rem;
+  background-color: #D62F36;
+}
+.capsule__right--bg-gray {
+  color: #FFF;
+  font-size: 0.8rem;
+  background-color: gray;
+}
+.modal {
+  height: 100px;
+}
+.modal__input {
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #000;
+  font-size: 0.8rem;
+}
+.modal__notation {
+  display: block;
+  text-align: center;
+}
+.modal__notation--color-red {
+  font-size: 0.6rem;
+  color: red;
+}
+.uploadLicence__button {
+  margin: 5px 0;
+  background-color: #F0F0F0;
+  box-shadow: 0 2px 5px #aaaaaa;
+}
+.modal__enterpriseDescrption {
+  box-sizing: border-box;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  min-height: 2rem;
+}

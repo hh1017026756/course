@@ -1,0 +1,42 @@
+/* pages/articleDetail/documentDetail/documentDetail.wxss */
+@import '/style/common.wxss';
+page {
+  background: #efefef;
+}
+.head-pic {
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.head-pic > image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.head {
+  padding: 10px;
+  background-color: white;
+}
+.document {
+  margin: 20px 0 0 0;
+  padding: 10px;
+  background-color: white;
+}
+.document__header {
+  color:black; 
+  font-size:1rem; 
+  font-weight:bold;
+}
+.document__detail {
+  margin: 0 0 10px 0;
+  width: 100%;
+  font-size:0.8rem;
+}
+.document__preview {
+  width: 100%;
+  margin: auto;
+}

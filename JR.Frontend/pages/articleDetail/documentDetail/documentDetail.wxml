@@ -1,0 +1,30 @@
+<!--pages/articleDetail/documentDetail/documentDetail.wxml-->
+<view style='width:100%'>
+  <view class='head-pic'>
+    <image src='img/document.png'></image>
+  </view>
+  <view class='head row'>
+    <view class='title column' style='width:100%'>
+      <text style='color:black; font-size:1rem; font-weight:bold;'>{{document.title}}</text>
+    </view>
+    <view class='v-center h-center' style='width:100px; border:1px solid black; margin:5px; border-radius:5px'>
+      <text style='color:black; font-size:1rem; margin:3px'>文档</text>
+    </view>
+  </view>
+  <view class='document column'>
+    <text class='document__header'>文档详情</text>
+    <view class='div-line'></view>
+    <text class='document__detail column'>{{document.content}}</text>
+    <text style='color:black; font-size:1rem; font-weight:bold;'>文档预览</text>
+    <view class='div-line'></view>
+    <image class='document__preview' mode='widthFix' src='{{document.preview}}' data-src='{{document.preview}}' bindtap='previewImg'></image>
+  </view>
+  <view class='download' style='margin: 20px'>
+    <view wx:if='{{!isDownLoadAttachment}}'>
+      <button class='jrq__button' bindtap='onDownload' disabled='{{!document.attachment}}'>下载文档</button>
+    </view>
+    <view wx:else>
+      <button class='jrq__button' bindtap='onOpen'>打开文档</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/me/publishMyArticle/publishMyArticle.wxml-->
+<view class='container container--color-gray'>
+  <view class='publisher'>
+    <view class='publisher-input'>
+      <textarea placeholder='关于所发内容的信息，如课程或项目描述、或文档下载地址。' bindinput='bindInputValue' maxlength='600'></textarea>
+      <view class='publisher-photos'>
+        <view wx:for='{{publishPhotos}}' wx:key='*this' class='publisher-photo'>
+          <image src='{{item}}'></image>
+        </view>
+        <view class='publisher-photo' bindtap='onUploadPhotos'>
+          <image src='img/plusPhoto.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='publisher-chooser'>
+      <!--
+      <view class='publisher-chooser-text'>
+        <text>您好！您可在当前页面发布一下内容，请选择对应内容类型</text>
+        <text>(当前版本仅支持圈子类型发布)</text>
+      </view>
+      <view class='row'>
+        <button style="{{publishType=='community'?'background-color:gray':''}}" bindtap='onChooseType' data-t='community'>圈子</button>
+        <button style="{{publishType=='course'?'background-color:gray':''}}" bindtap='onChooseType' data-t='course'>课程</button>
+        <button style="{{publishType=='document'?'background-color:gray':''}}" bindtap='onChooseType' data-t='document'>文档</button>
+        <button style="{{publishType=='project'?'background-color:gray':''}}" bindtap='onChooseType' data-t='project'>项目</button>
+      </view>
+      -->
+      <view class='publisher-button'>
+        <button class='jrq__button v-center h-center' bindtap='onPublish'>发布圈子</button>
+      </view>
+    </view>
+  </view>
+</view>

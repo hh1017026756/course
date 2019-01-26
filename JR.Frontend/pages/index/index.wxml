@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<import src='/template/searchBar/searchBar.wxml'></import>
+<import src='/template/adBar/adBar.wxml'></import>
+<import src='/template/likeIcon/likeIcon.wxml'></import>
+
+<view class="container container--color-white">
+  <view class='headWrapper' style='background-image: url({{bg1}}); background-size: cover;background-repeat: no-repeat; background-position: bottom'>
+    <!--搜索框-->
+    <template class='search' is='searchBar' data='{{placeholder: "搜索文章", searchCondition: searchCondition}}'></template>
+    <text class='search__keywords jrq__words'>关键词：金融；AAABBB</text>
+
+    <!--广告位-->
+    <template class='ad' is='adBar' data='{{ad}}'></template>
+
+    <!--Banner-->
+    <view class='navBar'>
+      <view class='navBar__btn {{currentKind=="all"?"navBar__btn-state--chosen":""}}' bindtap='showAll'>
+        <image class='navBar__icon' src='img/all.png'></image>
+      </view>
+      <view class='navBar__btn {{currentKind=="course"?"navBar__btn-state--chosen":""}}' bindtap='showCourses'>
+        <image class='navBar__icon' src='img/course.png'></image>
+      </view>
+      <view class='navBar__btn {{currentKind=="document"?"navBar__btn-state--chosen":""}}' bindtap='showDocuments'>
+        <image class='navBar__icon' src='img/document.png'></image>
+      </view>
+      <view class='navBar__btn {{currentKind=="project"?"navBar__btn-state--chosen":""}}' bindtap='showProjects'>
+        <image class='navBar__icon' src='img/project.png'></image>
+      </view>
+    </view>
+
+  </view>
+
+  <!--首页弹出蒙版框-->
+  <view class="b1" hidden="{{flag}}" bindtap="closeMask">
+    <view class="b2">
+      <image src="{{jumpAd}}" bindtap="touchMask"></image>
+    </view>
+    <view class="t_w">
+      <cover-view class="t_image" bindtap="closeMask">
+        <cover-image src="img/close.png"></cover-image>
+      </cover-view>
+    </view>
+  </view>
+
+  <!--文章列表-->
+  <view wx:if='{{searchCondition}}'>
+    <text class='jrq__words'>以下是“{{searchCondition}}”的搜索结果：</text>
+  </view>
+  <view class='articleListWrapper'>
+    <view class='articleWrapper' wx:for='{{articles}}' wx:key='id'>
+      <view class='article jrq__block' bindtap='onTouchThisArticle' data-kind='{{item.kind}}' data-id='{{item.id}}'>
+        <view class='article__decorator'>
+          <text class='article__kindName'>类别：{{item.kindName}}</text>
+        </view>
+        <view class='article__title'>
+          <text class='article__titleNum'>{{index+1}}</text>
+          <text class='article__titleName'>{{item.title}}</text>
+        </view>
+        <view class='article__content'>
+          <image class='article__banner' mode='widthFix' src='{{item.images.length > 0 ? item.images[0]: "../../default/default-pic.png"}}'></image>
+        </view>
+
+        <text class='article__date'>发布日期：{{item.date}}</text>
+
+        <!--文章底部-->
+        <view class='article__bottom'>
+          <!--作者信息-->
+          <view class='writer'>
+            <image class='writer__face' src='{{item.writerFace ? item.writerFace : "/default/default-face.png"}}'></image>
+            <text class='writer__name'>{{item.writerName}}</text>
+          </view>
+          <!--点赞-->
+          <view class='article__like'>
+            <template class='like' is='likeIcon' data='{{item: item}}'></template>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

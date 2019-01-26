@@ -1,0 +1,8 @@
+<!--pages/me/createPost/createPost.wxml-->
+<view class='post container--color-gray'>
+  <view class='post__hide'>
+    <canvas class='post__canvas' canvas-id="shareCanvas"></canvas>
+  </view>
+  <image class='post__image' mode='widthFix' src='{{imageTempUrl}}' bindtap='previewImage'></image>
+  <button class='jrq__button post__button' bindtap='onSave'>保存图片</button>
+</view>

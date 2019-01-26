@@ -1,0 +1,75 @@
+/*关于文章的属性*/
+.article {
+  position: relative;
+  background-color: #f7f1e5;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px #d0d0d0;
+  padding: 10px 10px;
+  margin: 20px 0 30px 0;
+}
+.article__decorator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: -10px;
+  width: 50%;
+  height: 20px;
+  background-color: #edc681;
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0 0 10px #a0a0a0;
+  left: -30%;
+}
+.article__kindName {
+  font-size: 0.8rem;
+  color: #927912;
+  font-weight: bold;
+  margin-left: auto;
+}
+.article__image {
+  width: 100px;
+  height: 100px;
+  margin: 2px;
+}
+.article__content {
+  display: block;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #927912;
+  margin: 5px 0 10px 0;
+}
+.article__bottom {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem;
+}
+.like {
+  display: flex;
+}
+.like__num {
+  margin: 0 5px 0 0;
+}
+.like__image {
+  width: 15px;
+  height: 15px;
+}
+/*关于文章作者的属性*/
+.writer {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 0 0;
+}
+.writer__face {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+.writer__name {
+  color: #927912;
+  font-weight: bold;
+  font-size: 1rem;
+}

@@ -1,0 +1,100 @@
+/* pages/myHistory/myHistory.wxss */
+@import '/style/common.wxss';
+@import '/template/articleItem/articleItem.wxss';
+
+/*本页面css属性*/
+/*关于我的名片的属性*/
+.header {
+  width: 100%;
+  padding: 10px;
+}
+.card {
+  background-color: white;
+}
+.card__face {
+  margin: 0 20px 0 0;  
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+.card__info {
+  display: inline-block;
+  font-size: 0.75rem;
+}
+.card__username {
+  margin: 0 0 10px 0;
+  font-size: 0.8rem;
+  color:#252D47;
+}
+.card__medal {
+  width: 15px;
+  height: 15px;
+  margin: 2px;
+}
+.card__text {
+  display: block;
+}
+.card__intro {
+  display: block;
+  font-size: 0.8rem;
+}
+/*关于我的联系方式的属性*/
+.contact {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F5F5;
+  padding: 10px 0;
+  margin: 10px 0 0 0;
+}
+.contact__info {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0.5rem;
+}
+.contact__item {
+  display: block;
+  font-size: 0.8rem;
+  margin: 10px;
+}
+.myInfoVisible-button-wrapper {
+  display: inline-flex;
+  align-items: center;
+}
+.myInfoVisible-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  font-size: 0.7rem;
+}
+.cardButton {
+  width: auto;
+  padding: 0 20px;
+  margin: 10px 5px;
+  font-size: 0.8rem;
+}
+.cardButton--style-backToIndex {
+  background-color: white;
+  border: 1px #243264 solid;
+  color: #243264;
+}
+/*关于历史发布的属性*/
+.history {
+  width: 100%;
+}
+.blue-block {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 20px;
+  margin: 0 5px 0 0;
+  background-color: #243264;
+}
+.history__title {
+  margin: 0 0 10px 0;
+}
+.history__titleText {
+  display: inline-block;
+  vertical-align: middle;
+  color: #243264;
+  font-size: 0.9rem;
+}

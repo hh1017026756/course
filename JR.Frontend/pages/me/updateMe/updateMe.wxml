@@ -1,0 +1,46 @@
+<!--pages/me/updateMe/updateMe.wxml-->
+<view class='container container--color-white'>
+  <!--身份升级-->
+  <view class="rowWrapper pay">
+    <text class='pay__note'>请点击升级选项进行身份升级（<text style='color:#000'>当前余额：{{price}}</text>）</text>
+    <button class='pay__button' bindtap='goToPay'>立即充值</button>
+  </view>
+  <view class='div-line'></view>
+  <view class='updateWrapper'>
+    <image class='updateWrapper__image' src='img/silver.png'></image>
+    <view class='updateWrapper__capsule capsule'>
+      <view class='capsule__left capsule__left--bg-red'>¥
+        <big>{{price298}}</big> / 365天</view>
+      <view wx:if='{{!is298}}' class='capsule__right capsule__right--bg-red' bindtap='updateTo298'>立即购买</view>
+      <view wx:else class='capsule__right capsule__right--bg-gray'>已购买</view>
+    </view>
+  </view>
+  <view class='updateWrapper'>
+    <image class='updateWrapper__image' src='img/gold.png'></image>
+    <view class='updateWrapper__capsule capsule'>
+      <view class='capsule__left capsule__left--bg-red'>¥
+        <big>{{price998}}</big> / 365天</view>
+      <view wx:if='{{!is998}}' class='capsule__right capsule__right--bg-red' bindtap='updateTo998'>立即购买</view>
+      <view wx:else class='capsule__right capsule__right--bg-gray'>已购买</view>
+    </view>
+  </view>
+  <view class='updateWrapper'>
+    <image class='updateWrapper__image' src='img/enterprise.png'></image>
+    <view class='updateWrapper__capsule capsule'>
+      <view class='capsule__left capsule__left--bg-red'>¥
+        <big>{{priceEnterprise}}</big> / 365天</view>
+      <view wx:if='{{!isEnterprise && !isEnterprisePending}}' class='capsule__right capsule__right--bg-red' bindtap='updateToEnterprise'>立即认证</view>
+      <view wx:elif='{{isEnterprisePending}}' class='capsule__right capsule__right--bg-gray'>认证中</view>
+      <view wx:else class='capsule__right capsule__right--bg-gray'>已认证</view>
+    </view>
+  </view>
+  <modal class="modal" hidden="{{isHideModalput}}" title="请设置您的企业用户名和密码" confirm-text="认证" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input class='modal__input' bindinput='updateUsername' type='text' placeholder="用户名"></input>
+    <text class='modal__notation modal__notation--color-red' wx:if='{{isAdminUsernameExistent}}'>用户名已存在</text>
+    <input class='modal__input' bindinput='updatePassword' type='text' placeholder="密码"></input>
+    <input class='modal__input' bindinput='updateEnterpriseName' type='text' placeholder='企业名称'></input>
+    <textarea class='modal__input modal__enterpriseDescrption' auto-height placeholder='企业描述（不少于30字）' placeholder-class='modal__enterpriseDescrption' bindinput='updateEnterpriseDescription'></textarea>
+    <text class='modal__notation modal__notation--color-red' wx:if='{{isEnterpriseDescriptionNotEnough}}'>企业描述不得少于30字</text>
+    <button class='uploadLicence__button' bindtap='uploadLicense'>上传企业经营许可证</button>
+  </modal>
+</view>

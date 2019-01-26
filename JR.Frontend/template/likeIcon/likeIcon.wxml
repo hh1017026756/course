@@ -1,0 +1,10 @@
+<!--template/likeIcon/likeIcon.wxml-->
+<template name="likeIcon">
+  <view class='like'>
+    <view class='likeClick' catchtap='likePlus' data-kind='{{item.kind}}' data-id='{{item.id}}'>
+      <text class='likeNum'>{{item.likeNum}}</text>
+      <image class='likeImage' wx:if='{{item.hasLiked}}' src='img/like.png'></image>
+      <image class='likeImage' wx:else src='img/unlike.png'></image>
+    </view>
+  </view>
+</template>

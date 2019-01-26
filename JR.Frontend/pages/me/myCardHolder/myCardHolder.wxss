@@ -1,0 +1,70 @@
+/* pages/myCardHolder/myCardHolder.wxss */
+@import '/style/common.wxss';
+@import '/template/searchBar/searchBar.wxss';
+
+/*本页面css属性*/
+page {
+  background-color: #efefef;
+}
+/*关于导航栏的属性*/
+.navbar {
+  margin: 10px 0 0 0;
+  background-color: white;
+  width: 100%;
+  border-width: 1px 0;
+  border-color: rgba(0, 0, 0, 0.212);
+  border-style: solid;
+  justify-content: flex-start;
+}
+.navbar view {
+  margin: 5px 20px;
+  font-size: 0.6rem;
+}
+/*关于名片的属性*/
+.cards {
+  padding: 0 10px 10px 10px;
+  width: 100%;
+}
+.one-card {
+  margin: 10px 0 0 0;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+}
+.one-card-face {
+  margin: 0 20px 0 0;
+}
+.one-card-face image {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+.one-card-info text {
+  font-size: 0.4rem;
+}
+.one-card-info-username {
+  margin: 0 0 10px 0;
+}
+.one-card-info-username > text {
+  margin: 0 10px 0 0;
+  font-size:0.8rem;
+  color:#252D47;
+}
+.one-card-info-username image {
+  width: 15px;
+  height: 15px;
+}
+/*关于名片上小图标的属性*/
+.icons {
+  margin: 10px 0 0 0;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.icons image {
+  width: 35px;
+  height: 35px;
+}
+.icons text {
+  font-size: 0.6rem;
+}

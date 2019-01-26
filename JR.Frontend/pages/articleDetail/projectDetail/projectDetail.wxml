@@ -1,0 +1,39 @@
+<!--pages/articleDetail/projectDetail/projectDetail.wxml-->
+<view style='width:100%'>
+  <view class='head-pic'>
+    <image src='img/project.png'></image>
+  </view>
+  <view class='project-head row'>
+  <view class='project-title column' style='width:100%'>
+    <text style='color:black; font-size:1rem; font-weight:bold;'>{{project.title}}</text>
+  </view>
+  <view class='v-center h-center' style='width:100px; border:1px solid black; margin:5px; border-radius:5px'>
+      <text style='color:black; font-size:1rem; margin:3px'>项目</text>
+    </view>
+  </view>
+  <view class='project-intro column'>
+    <text style='color:black; font-size:1rem; font-weight:bold;'>项目介绍</text>
+    <view class='div-line'></view>
+    <view class='detail column' style='font-size:0.8rem;'>
+      <text>项目编号：{{project.id}}</text>
+      <text>身份：{{project.identity}}</text>
+      <text>项目联系方式：{{project.phone}}</text>
+      <text>所在城市：{{project.city}}</text>
+      <text>所属行业：{{project.industry}}</text>
+      <text>业务标签：{{project.business}}</text>
+      <text>项目详情：{{project.content}}</text>
+      <text>项目资金：{{project.money}}</text>
+      <text>是否存在附件：{{project.attachment?'是':'否'}}</text>
+    </view>
+  </view>
+  <view class='courseButtons row'>
+    <view class='download' style='width:100%'>
+      <view wx:if='{{!isDownLoadAttachment}}'>
+        <button class='jrq__button' bindtap='onDownload' disabled='{{!project.attachment}}'>下载附件</button>
+      </view>
+      <view wx:else>
+        <button class='jrq__button' bindtap='onOpen'>打开附件</button>
+      </view>
+    </view>
+  </view>
+</view>

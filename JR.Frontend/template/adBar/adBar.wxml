@@ -1,0 +1,3 @@
+<template name='adBar'>
+  <image class='ad' mode='widthFix' src='{{ad.image}}' bindtap='onAd'></image>
+</template>

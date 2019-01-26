@@ -1,0 +1,60 @@
+<!--pages/modifyMyCard/modifyMyCard.wxml-->
+<view class='container container--color-gray'>
+  <view class='face h-center column' bindtap='updateFace'>
+    <image src='{{myInfo.face}}'></image>
+    <text class='face-text'>点击更换头像</text>
+  </view>
+  <view style='width: 100%;'>
+    <view class='infos column'>
+      <view class='info'>
+        <text class='info__key'>姓名</text>
+        <input class='info__value' placeholder='{{myInfo.username}}' bindinput='updateName'></input>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>手机号</text>
+        <input class='info__value' placeholder='{{myInfo.phone}}' bindinput='updatePhone'></input>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>Email</text>
+        <input class='info__value' placeholder='{{myInfo.email}}' bindinput='updateEmail'></input>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>城市</text>
+        <input class='info__value' placeholder='{{myInfo.city}}' bindinput='updateCity'></input>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>任职公司</text>
+        <input class='info__value' placeholder='{{myInfo.company}}' bindinput='updateCompany'></input>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>部门</text>
+        <input class='info__value' placeholder='{{myInfo.department}}' bindinput='updateDepartment'></input>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>职位</text>
+        <input class='info__value' placeholder='{{myInfo.position}}' bindinput='updatePosition'></input>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>业务标签</text>
+        <picker class='info__value' bindchange="bindLabelPickerChange" value="{{labelIndex}}" range="{{labelArray}}">
+          <view class="picker">
+            {{labelArray[labelIndex]}}
+          </view>
+        </picker>
+      </view>
+      <view class='div-line'></view>
+      <view class='info'>
+        <text class='info__key'>个人简介:</text>
+        <textarea class='info__value info__textarea' auto-height="true" placeholder='{{myInfo.intro}}' bindinput='updateIntro'></textarea>
+      </view>
+    </view>
+  </view>
+  <button class='jrq__button save-btn' bindtap='onSave'>保存并返回</button>
+</view>

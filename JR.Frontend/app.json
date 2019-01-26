@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/community/community",
+    "pages/service/service",
+    "pages/me/me",
+    "pages/me/myCardHolder/myCardHolder",
+    "pages/me/modifyMyCard/modifyMyCard",
+    "pages/me/myHistory/myHistory",
+    "pages/articleDetail/courseDetail/courseDetail",
+    "pages/articleDetail/documentDetail/documentDetail",
+    "pages/articleDetail/projectDetail/projectDetail",
+    "pages/ad/ad",
+    "pages/me/publishMyArticle/publishMyArticle",
+    "pages/login/login",
+    "pages/me/updateMe/updateMe",
+    "pages/me/pay/pay",
+    "pages/me/myEnterprise/myEnterprise",
+    "pages/me/createPost/createPost",
+    "pages/news/news",
+    "template/likeIcon/likeIcon",
+    "template/publishBar/publishBar"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "钧融圈",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#C09B54",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index-choose.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "img/news.png",
+        "selectedIconPath": "img/news-choose.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "业务",
+        "iconPath": "img/service.png",
+        "selectedIconPath": "img/service-choose.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "圈子",
+        "iconPath": "img/community.png",
+        "selectedIconPath": "img/community-choose.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "img/me.png",
+        "selectedIconPath": "img/me-choose.png"
+      }
+    ]
+  }
+}

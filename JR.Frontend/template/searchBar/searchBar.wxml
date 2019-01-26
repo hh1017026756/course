@@ -1,0 +1,11 @@
+<!--template/searchBar/searchBar.wxml-->
+<template name='searchBar'>
+  <view class='search row'>
+    <view class='search-image h-center v-center' bindtap='onSearch'>
+      <image src='/template/searchBar/img/search.png'></image>
+    </view>
+    <view class='search-input'>
+      <input value='{{searchCondition}}' placeholder='{{placeholder}}' bindinput='updateSearchCondition' bindconfirm='onSearch'></input>
+    </view>
+  </view>
+</template>

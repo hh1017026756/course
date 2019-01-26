@@ -1,0 +1,15 @@
+<!--pages/community/community.wxml-->
+<import src='/template/articleItem/articleItem.wxml'></import>
+<import src='/template/publishBar/publishBar.wxml'></import>
+
+<view class='container container--color-white'>
+  <template is='publishBar'></template>
+  <view wx:if='{{articles.length > 0}}' class='articleListWrapper'>
+    <view wx:for='{{articles}}' wx:key='id'>
+      <template is='articleItem' data='{{item}}'></template>
+    </view>
+  </view>
+  <view wx:else>
+    <text>您的圈子还没有朋友文章发布哦，赶快去增加新的朋友吧</text>
+  </view>
+</view>

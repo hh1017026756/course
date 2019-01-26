@@ -1,0 +1,49 @@
+<!--pages/myCardHolder/myCardHolder.wxml-->
+<import src='/template/searchBar/searchBar.wxml'/>
+
+<view class='container container--color-gray'>
+  <!--搜索框-->
+  <template is='searchBar' data='{{placeholder: "搜索姓名、公司名称", searchCondition: searchCondition}}'></template>
+  <view class='navbar row'>
+    <view bindtap='showNewCards'>
+      <text wx:if='{{kind==="new"}}' style='color:#000; font-weight:bold'>新收到的</text>
+      <text wx:else>新收到的</text>
+    </view>
+    <view bindtap='showCurrentCards'>
+      <text wx:if='{{kind==="current"}}' style='color:#000; font-weight:bold'>我持有的</text>
+      <text wx:else>我持有的</text>
+    </view>
+    <view bindtap='showWhoHasMyCard'>
+      <text wx:if='{{kind==="whoHasMyCard"}}' style='color:#000; font-weight:bold'>拥有我名片的</text>
+      <text wx:else>拥有我名片的</text>
+    </view>
+  </view>
+  <!--名片展示列表-->
+  <view class='cards column v-center'>
+    <text wx:if='{{searchCondition || searchCondition===""}}'>以下是“{{searchCondition}}”的搜索结果：</text>
+    <view class='one-card column' bindtap='onClickThisCard' data-id='{{card.openid}}'  wx:for='{{cards}}' wx:for-item='card' wx:key='openid'>
+      <view class='row v-center'>
+        <view class='one-card-face'>
+          <image src='{{card.face}}'></image>
+        </view>
+        <view class='one-card-info column'>
+          <view class='one-card-info-username row v-center'>
+            <text>{{card.username}}</text>
+            <view wx:for='{{card.medals}}'>
+              <image src='{{item}}'></image>
+            </view>
+          </view>
+          <text>手机号: {{card.phone}}</text>
+          <text>Email: {{card.email}}</text>
+          <text>任职公司: {{card.company}}</text>
+          <text>部门: {{card.department}}</text>
+          <text>职位: {{card.position}}</text>
+        </view>
+      </view>
+      <view class='div-line'></view>
+      <view class='one-card-intro'>
+        <text style='font-size: 0.5rem;'>个人简介：{{card.intro}}</text>
+      </view>
+    </view>
+  </view>
+</view>

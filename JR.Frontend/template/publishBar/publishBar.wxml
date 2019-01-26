@@ -1,0 +1,9 @@
+<!--template/publisherBar/publisherBar.wxml-->
+<template name='publishBar'>
+ <view class='publishBarWrapper'>
+    <view class='publishBar' bindtap='onPublish'>
+      <text class='publishBar__text'>点击发布业务合作、商业资讯或日常信息...</text>
+      <image class='publishBar__camera' src=' /template/publishBar/img/camera.png'></image>
+    </view>
+  </view>
+</template>

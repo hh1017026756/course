@@ -1,0 +1,21 @@
+<!--pages/me/pay/pay.wxml-->
+<view class='container container--color-gray'>
+  <!--金额充值-->
+  <form bindsubmit="bindSave">
+    <view class="form-box">
+      <view class='row-wrap'>
+        <view class="label">当前钧融币</view>
+        <view class="label-right">{{price}}</view>
+      </view>
+      <view class="row-wrap">
+        <view class="label">充值钧融币</view>
+        <view class="label-right">
+          <input name="amount" class="input" type="number" placeholder="0" />
+        </view>
+      </view>
+    </view>
+    <text class='note'>（1钧融币=1人民币）</text>
+    <button type="warn" class="save-btn" formType="submit">立即支付</button>
+    <button type="default" class="cancel-btn" bindtap="bindCancel">取消</button>
+  </form>
+</view>
